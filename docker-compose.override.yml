@@ -1,0 +1,11 @@
+services:
+  backend:
+    command: dotnet watch run --urls http://0.0.0.0:80
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+  frontend:
+    # Убрать команду npm start для production
+    # Или изменить на правильную команду для nginx
+    environment:
+      CHOKIDAR_USEPOLLING: true
